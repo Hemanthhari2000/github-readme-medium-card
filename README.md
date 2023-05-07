@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Github Readme Medium Card
+
+Generates a medium card based on your information, like giving the index of the article and color mode in which you want.
+
+## Example
+
+Use as follows:
+
+`<a target="_blank" href="https://github-readme-medium-card-five.vercel.app/api/medium/hemanthhari2000?index=0&mode=heman"><img src="https://github-readme-medium-card-five.vercel.app/api/medium/hemanthhari2000?index=0&mode=heman" alt="Recent Article 0">`
+
+The URL used is
+
+`https://github-readme-medium-card-five.vercel.app/api/medium/{MEDIUM_USERNAME_WITHOUT_@}?index={INDEX}&mode={THEME}`
+
+**MEDIUM_USERNAME_WITHOUT_@** - For example if you medium username is `@hemanthhari2000` then add only `hemanthhari2000` in the url.
+**INDEX** - Index of the article. Article order starts from 0 which means the latest article has an index 0.
+**THEME** - Supports the color theme. Currently, supports 3 theme's namely: `light`, `dark` and `heman`
 
 ## Getting Started
 
