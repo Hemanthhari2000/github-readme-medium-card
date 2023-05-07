@@ -1,0 +1,13 @@
+.wrapper {
+	height: 100vh;
+	background-color: #2e014cee;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+.under_construction {
+	text-align: center;
+	font-size: larger;
+}
