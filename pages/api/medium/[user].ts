@@ -1,4 +1,4 @@
-import getMediumRSSFeedDataFor from "@/lib/getMediumRSSFeed";
+import getMediumRSSFeedDataFor from "@/lib/utils";
 import mediumCard from "@/lib/mediumCard";
 import axios from "axios";
 import moment from "moment";
