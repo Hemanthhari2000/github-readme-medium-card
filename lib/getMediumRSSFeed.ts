@@ -1,9 +1,7 @@
 import axios from "axios";
 
 const getMediumRSSFeedDataFor = async (user: string) => {
-	const rssFeedURL =
-		"https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@" +
-		user;
+  const rssFeedURL = `https://api.rss2json.com/v1/api.json?api_key=${process.env.RSS_API_KEY}&rss_url=https://medium.com/feed/@${user}&count=2`;
 
 	try {
 		const { data, status } = await axios.get<FeedResponseDataType>(rssFeedURL);
