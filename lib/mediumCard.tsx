@@ -1,6 +1,6 @@
 const mediumCard = (props: {
-	mode: string;
-	result: FeedResponseDataItemsType;
+  mode: string;
+  result: FeedResponseDataItemsType;
 }) => `
 <svg fill="none" width="350" height="400" xmlns="http://www.w3.org/2000/svg">
 	<foreignObject width="100%" height="100%">
@@ -51,6 +51,10 @@ const mediumCard = (props: {
 				.date-light {
 					color: #a0aec0;
 				}
+				.a-underline-light {
+					text-decoration: underline;
+					color: #000000cc;
+				}
 
 				/* DARK */
 				.container-dark{
@@ -64,6 +68,10 @@ const mediumCard = (props: {
 				}
 				.date-dark {
 					color: #a0aec0;
+				}
+				.a-underline-dark {
+					text-decoration: underline;
+					color: #ffffff;
 				}
 
 				/* HEMAN */
@@ -79,6 +87,10 @@ const mediumCard = (props: {
 				.date-heman {
 					color: #a0aec0;
 				}
+				.a-underline-heman {
+					text-decoration: underline;
+					color: #ffffff;
+				}
 
 			</style>
 			<div class="container container-${props.mode}">
@@ -90,16 +102,20 @@ const mediumCard = (props: {
 					/>
 				</div>
 				<div class="body">
-					<h3 class="title title-${props.mode}">${props.result.title}</h3>
+					<a class="a-underline-${props.mode}" target="_blank" href="${
+  props.result.link
+}">
+						<h3 class="title title-${props.mode}">${props.result.title}</h3>
+					</a>
 					<p class="description description-${props.mode}">
 							${
-								props.result.description
-									.replace(
-										/<h3>.*<\/h3>|<figcaption>.*<\/figcaption>|<[^>]*>/gm,
-										""
-									)
-									.substring(0, 60) + "..."
-							}
+                props.result.description
+                  .replace(
+                    /<h3>.*<\/h3>|<figcaption>.*<\/figcaption>|<[^>]*>/gm,
+                    ""
+                  )
+                  .substring(0, 60) + "..."
+              }
 					</p>
 					<small class="date date-${props.mode}">${props.result.pubDate}</small>
 				</div>
