@@ -21,3 +21,9 @@ type FeedResponseDataType = {
 	feed: object;
 	items: FeedResponseDataItemsType[];
 };
+
+interface MediumAPIQueryParams {
+  user: string;
+  index?: number;
+  mode?: string;
+}
